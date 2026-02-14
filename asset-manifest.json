@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Jammming/static/css/main.7f11fe41.css",
+    "main.js": "/Jammming/static/js/main.9c8d4cf5.js",
+    "static/js/453.50470736.chunk.js": "/Jammming/static/js/453.50470736.chunk.js",
+    "index.html": "/Jammming/index.html",
+    "main.7f11fe41.css.map": "/Jammming/static/css/main.7f11fe41.css.map",
+    "main.9c8d4cf5.js.map": "/Jammming/static/js/main.9c8d4cf5.js.map",
+    "453.50470736.chunk.js.map": "/Jammming/static/js/453.50470736.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f11fe41.css",
+    "static/js/main.9c8d4cf5.js"
+  ]
+}
