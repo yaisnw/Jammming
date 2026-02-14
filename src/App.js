@@ -21,9 +21,12 @@ function App() {
     const expiryTime = queryParams.get("expires_in")
     let hash = window.location.hash
     if (hash) {
-      let token = hash.substring(1).split("&").find(elem => elem.startsWith("access_token")).split("=")[1]
-      setToken(token)
-      setExpiry(expiryTime)
+      const tokenParam = hash.substring(1).split("&").find(elem => elem.startsWith("access_token"));
+      if (tokenParam) {
+        let token = tokenParam.split("=")[1];
+        setToken(token);
+        setExpiry(expiryTime);
+      }
     }
 
     if (expiryTime) {
