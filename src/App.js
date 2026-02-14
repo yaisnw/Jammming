@@ -29,8 +29,6 @@ function App() {
     if (expiryTime) {
       setTimeout(() => { setExpiry(0); window.location.hash = "" }, expiryTime * 1000)
     }
-    // console.log(token)
-    // console.log(expiryTime)
   }, [])
   // song search
   const search = async () => {
@@ -41,8 +39,8 @@ function App() {
       }
     })
     const jsonResponse = await response.json();
-   
-    setSearchResults(jsonResponse.tracks.items.slice(0,10))
+
+    setSearchResults(jsonResponse.tracks.items.slice(0, 10))
   }
   // token access
   const getRandomString = (length) => {
@@ -54,8 +52,8 @@ function App() {
     return text;
   }
   let url = "https://accounts.spotify.com/authorize"
-  const client_id = "abe8d36909674f07a5ef4e8bc1de4c34";
-  const redirect_uri = "http://localhost:3000";
+  const client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+  const redirect_uri = process.env.REACT_APP_REDIRECT_URI;
   const state = getRandomString(16);
   url += "?response_type=token";
   url += "&client_id=" + encodeURIComponent(client_id);
