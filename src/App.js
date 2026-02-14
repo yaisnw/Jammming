@@ -100,7 +100,7 @@ function App() {
     setSaving(true)
     const playlistAddEndpoint = `https://api.spotify.com/v1/playlists/${jsonPlaylistPostId}/tracks`;
     try {
-      const playlistAdd = await fetch(playlistAddEndpoint, {
+      await fetch(playlistAddEndpoint, {
         method: "POST",
 
         headers: {
